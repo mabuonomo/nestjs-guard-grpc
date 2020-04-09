@@ -25,6 +25,9 @@
     "@nestjs/core": "^7.0.7",
     "@nestjs/testing": "^7.0.7",
     "@types/jest": "^25.2.1",
+    "@types/jsonwebtoken": "^8.3.9",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.7.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   },
