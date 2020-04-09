@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "nestjs-guard-grpc": {
+      "type": "library",
+      "root": "libs/nestjs-guard-grpc",
+      "entryFile": "index",
+      "sourceRoot": "libs/nestjs-guard-grpc/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/nestjs-guard-grpc/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}
