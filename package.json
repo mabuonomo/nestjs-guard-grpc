@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/mabuonomo/nestjs-guard-grpc/issues"
   },
-  "homepage": "https://github.com/mabuonomo/nestjs-guard-grpc#readme"
+  "homepage": "https://github.com/mabuonomo/nestjs-guard-grpc#readme",
+  "dependencies": {
+    "@nestjs/common": "^7.0.7",
+    "@nestjs/testing": "^7.0.7",
+    "@types/jest": "^25.2.1"
+  }
 }
