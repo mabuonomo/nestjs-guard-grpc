@@ -9,7 +9,7 @@ export class JwtService implements AuthServiceInterface {
   constructor(options: jwks.ClientOptions) {
     this.client = new jwks.JwksClient(options);
   }
-  verify(params: any): boolean {
+  verify(params: any): any {
     return jwt.verify(params.token, this.getKey, params.options);
   }
 
