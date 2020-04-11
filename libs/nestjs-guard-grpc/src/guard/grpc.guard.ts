@@ -1,7 +1,4 @@
 import { Injectable, CanActivate, ExecutionContext, UnauthorizedException } from '@nestjs/common';
-import * as jwt from 'jsonwebtoken';
-import * as jwks from 'jwks-rsa';
-import { UserInterface } from '../interfaces/user.interface';
 import { AuthServiceInterface } from '../interfaces/auth.interface';
 
 // https://github.com/nestjs/passport/blob/6d9c71fa04e5c16480ba0b7e7671e43918dd9ff4/lib/auth.guard.ts
