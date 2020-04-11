@@ -1,3 +1,5 @@
-export interface AuthInterface {
-  verify(params: any): boolean;
+import { UserInterface } from './user.interface';
+
+export interface AuthServiceInterface {
+  verify(params: any): UserInterface | undefined;
 }

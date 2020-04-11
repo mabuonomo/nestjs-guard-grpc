@@ -1,3 +1,1 @@
-export interface UserInterface {
-  loadUser(param: any): any;
-}
+export interface UserInterface {}
