@@ -1,6 +1,6 @@
 {
   "name": "nestjs-guard-grpc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "```sh nest g library nestjs-guard-grpc ```",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "@types/jsonwebtoken": "^8.3.9",
     "jsonwebtoken": "^8.5.1",
     "jwks-rsa": "^1.7.0",
+    "rxjs": "^6.5.5",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   },
