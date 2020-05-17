@@ -19,3 +19,7 @@ npm_publish:
 	git commit -m "publish"
 	npm version patch
 	npm publish
+
+npm_update_last:
+	${docker} ${project} ncu -u
+	make init
