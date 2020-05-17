@@ -17,3 +17,4 @@ npm_publish:
 	git add .
 	git commit -m "publish"
 	npm version patch
+	npm publish
