@@ -1,8 +1,8 @@
 {
   "name": "nestjs-guard-grpc",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "```sh nest g library nestjs-guard-grpc ```",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint -p tsconfig.json -c tslint.json",
