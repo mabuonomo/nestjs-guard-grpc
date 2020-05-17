@@ -14,6 +14,7 @@ build:
 	./node_modules/.bin/tsc -p ./tsconfig.json
 
 npm_publish:
+	make build
 	git add .
 	git commit -m "publish"
 	npm version patch
