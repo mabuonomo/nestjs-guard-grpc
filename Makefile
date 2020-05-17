@@ -7,3 +7,13 @@ init:
 format:
 	${docker} ${project} npm run format
 	${docker} ${project} npm run lint:fix
+
+build:
+	make format
+	rm -R dist/
+	./node_modules/.bin/tsc -p ./tsconfig.json
+
+npm_publich:
+	git add .
+	git commit -m "publish"
+	npm version patch

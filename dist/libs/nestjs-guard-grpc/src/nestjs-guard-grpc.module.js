@@ -7,15 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const nestjs_guard_grpc_service_1 = require("./nestjs-guard-grpc.service");
 const jwt_service_1 = require("./jwt/jwt.service");
-const grpc_guard_1 = require("./guard/grpc.guard");
 let NestjsGuardGrpcModule = class NestjsGuardGrpcModule {
 };
 NestjsGuardGrpcModule = __decorate([
     common_1.Module({
-        providers: [nestjs_guard_grpc_service_1.NestjsGuardGrpcService, jwt_service_1.JwtService],
-        exports: [nestjs_guard_grpc_service_1.NestjsGuardGrpcService, grpc_guard_1.GrpcAuthGuard],
+        providers: [jwt_service_1.JwtService],
+        exports: [jwt_service_1.JwtService],
     })
 ], NestjsGuardGrpcModule);
 exports.NestjsGuardGrpcModule = NestjsGuardGrpcModule;
