@@ -13,7 +13,7 @@ build:
 	rm -R dist/
 	./node_modules/.bin/tsc -p ./tsconfig.json
 
-npm_publich:
+npm_publish:
 	git add .
 	git commit -m "publish"
 	npm version patch
