@@ -3,8 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.JwtService = void 0;
 const jwt = require("jsonwebtoken");
 class JwtService {
-    constructor(options) {
-    }
     verify(params) {
         return jwt.verify(params.token, this.getKey, params.options);
     }
