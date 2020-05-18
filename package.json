@@ -1,6 +1,6 @@
 {
   "name": "nestjs-guard-grpc",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "```sh nest g library nestjs-guard-grpc ```",
   "main": "dist/index.js",
   "scripts": {
