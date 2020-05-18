@@ -6,7 +6,7 @@ import { JwksClient, ClientOptions, RsaSigningKey } from 'jwks-rsa';
 export class JwtService implements AuthServiceInterface {
   client: JwksClient;
   constructor(options: ClientOptions) {
-    this.client = new JwksClient(options);
+    // this.client = new JwksClient(options);
   }
   verify(params: any): any {
     return jwt.verify(params.token, this.getKey, params.options);

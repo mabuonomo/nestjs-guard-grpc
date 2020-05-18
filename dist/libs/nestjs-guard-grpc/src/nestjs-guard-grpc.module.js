@@ -6,14 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.NestjsGuardGrpcModule = void 0;
 const common_1 = require("@nestjs/common");
-let NestjsGuardGrpcModule = class NestjsGuardGrpcModule {
-};
-NestjsGuardGrpcModule = __decorate([
-    common_1.Module({
-        providers: [],
-        exports: [],
-    })
-], NestjsGuardGrpcModule);
+let NestjsGuardGrpcModule = (() => {
+    let NestjsGuardGrpcModule = class NestjsGuardGrpcModule {
+    };
+    NestjsGuardGrpcModule = __decorate([
+        common_1.Module({
+            providers: [],
+            exports: [],
+        })
+    ], NestjsGuardGrpcModule);
+    return NestjsGuardGrpcModule;
+})();
 exports.NestjsGuardGrpcModule = NestjsGuardGrpcModule;
 //# sourceMappingURL=nestjs-guard-grpc.module.js.map

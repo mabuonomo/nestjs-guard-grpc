@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.JwtService = void 0;
 const jwt = require("jsonwebtoken");
-const jwks_rsa_1 = require("jwks-rsa");
 class JwtService {
     constructor(options) {
-        this.client = new jwks_rsa_1.JwksClient(options);
     }
     verify(params) {
         return jwt.verify(params.token, this.getKey, params.options);
