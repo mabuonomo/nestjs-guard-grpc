@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { JwtService } from './jwt/jwt.service';
+import { GrpcAuthGuard } from './guard/grpc.guard';
 
 @Module({
-  providers: [],
-  exports: [],
+  providers: [GrpcAuthGuard],
+  exports: [GrpcAuthGuard],
 })
 export class NestjsGuardGrpcModule {}
