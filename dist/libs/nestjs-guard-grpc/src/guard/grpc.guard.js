@@ -25,7 +25,6 @@ class GrpcAuthGuard {
             let header;
             if (type === 'rpc') {
                 const metadata = context.getArgByIndex(1);
-                console.log('Metadata', metadata);
                 if (!metadata) {
                     return false;
                 }

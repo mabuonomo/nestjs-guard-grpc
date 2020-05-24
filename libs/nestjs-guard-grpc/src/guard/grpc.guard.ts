@@ -20,7 +20,6 @@ export class GrpcAuthGuard implements CanActivate {
     let header: any;
     if (type === 'rpc') {
       const metadata = context.getArgByIndex(1);
-      console.log('Metadata', metadata);
       if (!metadata) {
         return false;
       }
