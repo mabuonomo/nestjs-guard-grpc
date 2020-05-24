@@ -13,6 +13,8 @@ export class GrpcAuthGuard implements CanActivate {
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = this.getRequest(context);
 
+    console.log('Request', request);
+
     const type = context.getType();
     const prefix = 'Bearer ';
     let header;
@@ -36,6 +38,8 @@ export class GrpcAuthGuard implements CanActivate {
     console.log('Token', token);
 
     const user = this.authService.verify(token);
+
+    console.log('User', user);
 
     if (user === undefined) {
       return false;
