@@ -1,5 +1,16 @@
-# nestjs-guard-grpc
-WIP
+# Nestjs - GrpcAuthGuard
+
+GrpcAuthGuard is a generic guard for NestJS optimized for grpc scope. You can inject you personalized auth service to customize it. This guard read from metadatas on a grpc call.
+
+## Installation
+
+```sh
+npm i --save nestjs-guard-grpc
+```
+
+## Usage
+
+On you controller use the guard _GrpcAuthGuard_
 
 ```ts
 @Controller()
@@ -12,6 +23,10 @@ export class UserController {
   }
 }
 ```
+
+_@GRPCUser()_ is a decorator that inject the user loaded from the authentication.
+
+Now you need to build your own auth service that implement the IAuthService interface. For example if you want to use a jwt token you can use the follow service:
 
 ```ts
 import { Injectable } from '@nestjs/common';
@@ -54,6 +69,26 @@ export class GrpcJwtService implements IAuthService {
 }
 ```
 
+Finally inject your own service into _GrpcAuthGuard_
+
+```ts
+@Module({
+  controllers: [UserController],
+  providers: [
+    GrpcJwtService,
+    {
+      provide: 'IAuthService',
+      useClass: GrpcJwtService,
+    },
+  ],
+})
+export class UsersModule {}
+```
+
+## Testing
+
+The following code is a base grpc client. How you can see the token jwt is part of the metadata field.
+
 ```ts
 const echoService = new UserServiceClient('http://localhost:8080', null, null);
 
@@ -73,3 +108,8 @@ call.on('status', (status: grpcWeb.Status) => {
   console.log('Status', status);
 });
 ```
+
+## References
+
+- <a href="https://docs.nestjs.com/guards">https://docs.nestjs.com/guards</a>
+- <a href="https://grpc.io/">https://grpc.io/</a>
