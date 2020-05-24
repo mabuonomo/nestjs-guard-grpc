@@ -8,14 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NestjsGuardGrpcModule = void 0;
 const common_1 = require("@nestjs/common");
-const grpc_guard_1 = require("./guard/grpc.guard");
 let NestjsGuardGrpcModule = (() => {
     let NestjsGuardGrpcModule = class NestjsGuardGrpcModule {
     };
     NestjsGuardGrpcModule = __decorate([
         common_1.Module({
-            providers: [grpc_guard_1.GrpcAuthGuard],
-            exports: [grpc_guard_1.GrpcAuthGuard],
+            providers: [],
+            exports: [],
         })
     ], NestjsGuardGrpcModule);
     return NestjsGuardGrpcModule;
