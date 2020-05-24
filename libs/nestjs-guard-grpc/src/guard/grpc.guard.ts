@@ -7,6 +7,7 @@ export class GrpcAuthGuard implements CanActivate {
   constructor(private authService: AuthServiceInterface) {}
 
   getRequest(context: ExecutionContext) {
+    console.log('Context', context);
     return context.switchToRpc().getContext().req;
   }
 

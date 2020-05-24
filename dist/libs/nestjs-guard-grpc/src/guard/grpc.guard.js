@@ -15,6 +15,7 @@ class GrpcAuthGuard {
         this.authService = authService;
     }
     getRequest(context) {
+        console.log('Context', context);
         return context.switchToRpc().getContext().req;
     }
     canActivate(context) {
