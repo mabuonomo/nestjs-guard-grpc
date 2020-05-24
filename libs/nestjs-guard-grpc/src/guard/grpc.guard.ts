@@ -18,17 +18,23 @@ export class GrpcAuthGuard implements CanActivate {
     let header;
     if (type === 'rpc') {
       const metadata = context.getArgByIndex(1); // metadata // .SWITCHTORCP
+      console.log('Metadata', metadata);
       if (!metadata) {
         return false;
       }
       header = metadata.get('Authorization')[0];
     }
 
+    console.log('Header', header);
+
     if (!header || !header.includes(prefix)) {
       return false;
     }
 
     const token = header.slice(header.indexOf(' ') + 1);
+
+    console.log('Token', token);
+
     const user = this.authService.verify(token);
 
     if (user === undefined) {

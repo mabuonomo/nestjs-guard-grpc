@@ -11,7 +11,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./libs/nestjs-guard-grpc/src/nestjs-guard-grpc.module"), exports);
-__exportStar(require("./libs/nestjs-guard-grpc/src/jwt/jwt.service"), exports);
 __exportStar(require("./libs/nestjs-guard-grpc/src/interfaces/auth.interface"), exports);
 __exportStar(require("./libs/nestjs-guard-grpc/src/interfaces/user.interface"), exports);
 __exportStar(require("./libs/nestjs-guard-grpc/src/guard/grpc.guard"), exports);

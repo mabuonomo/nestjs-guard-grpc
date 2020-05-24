@@ -31,7 +31,8 @@
     ],
     "arrow-parens": false,
     "object-literal-sort-keys": false,
-    "no-empty-interface": false
+    "no-empty-interface": false,
+    "no-console": false
   },
   "rulesDirectory": []
 }
