@@ -15,13 +15,11 @@ class GrpcAuthGuard {
         this.authService = authService;
     }
     getRequest(context) {
-        console.log('Context', context);
         return context.switchToRpc().getContext();
     }
     canActivate(context) {
         return __awaiter(this, void 0, void 0, function* () {
             const request = this.getRequest(context);
-            console.log('Request', request);
             const type = context.getType();
             const prefix = 'Bearer ';
             let header;
@@ -33,14 +31,11 @@ class GrpcAuthGuard {
                 }
                 header = metadata.get('Authorization')[0];
             }
-            console.log('Header', header);
             if (!header || !header.includes(prefix)) {
                 return false;
             }
             const token = header.slice(header.indexOf(' ') + 1);
-            console.log('Token', token);
             const user = yield this.authService.verify(token);
-            console.log('User', user);
             if (user === undefined) {
                 return false;
             }
