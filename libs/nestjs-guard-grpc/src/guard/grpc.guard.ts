@@ -8,7 +8,7 @@ export class GrpcAuthGuard implements CanActivate {
 
   getRequest(context: ExecutionContext) {
     console.log('Context', context);
-    return context.switchToRpc().getContext().req;
+    return context.switchToRpc().getContext();
   }
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
