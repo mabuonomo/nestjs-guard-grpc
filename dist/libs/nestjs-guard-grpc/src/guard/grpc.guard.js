@@ -38,7 +38,7 @@ class GrpcAuthGuard {
             }
             const token = header.slice(header.indexOf(' ') + 1);
             console.log('Token', token);
-            const user = this.authService.verify(token);
+            const user = yield this.authService.verify(token);
             console.log('User', user);
             if (user === undefined) {
                 return false;

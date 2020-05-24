@@ -37,7 +37,7 @@ export class GrpcAuthGuard implements CanActivate {
 
     console.log('Token', token);
 
-    const user = this.authService.verify(token);
+    const user = await this.authService.verify(token);
 
     console.log('User', user);
 
