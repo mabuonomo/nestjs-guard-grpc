@@ -1,11 +1,11 @@
-import { Injectable, CanActivate, ExecutionContext, UnauthorizedException } from '@nestjs/common';
+import { Injectable, CanActivate, ExecutionContext, UnauthorizedException, Inject } from '@nestjs/common';
 import { AuthServiceInterface } from '../interfaces/auth.interface';
 import { UserInterface } from '../interfaces/user.interface';
 
 // https://github.com/nestjs/passport/blob/6d9c71fa04e5c16480ba0b7e7671e43918dd9ff4/lib/auth.guard.ts
 @Injectable()
 export class GrpcAuthGuard implements CanActivate {
-  constructor(private authService: AuthServiceInterface) {}
+  constructor(@Inject('AUTHSERVICE') private authService: AuthServiceInterface) {}
 
   getRequest(context: ExecutionContext) {
     return context.switchToRpc().getContext();
