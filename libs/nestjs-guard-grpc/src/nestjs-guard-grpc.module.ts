@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { GrpcAuthGuard } from './guard/grpc.guard';
 
 @Module({
-  providers: [], // GrpcAuthGuard],
-  exports: [], // GrpcAuthGuard],
+  providers: [],
+  exports: [],
 })
 export class NestjsGuardGrpcModule {}

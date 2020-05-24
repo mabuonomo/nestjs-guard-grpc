@@ -59,7 +59,7 @@ let GrpcAuthGuard = (() => {
     };
     GrpcAuthGuard = __decorate([
         common_1.Injectable(),
-        __param(0, common_1.Inject('AUTHSERVICE')),
+        __param(0, common_1.Inject('IAuthService')),
         __metadata("design:paramtypes", [Object])
     ], GrpcAuthGuard);
     return GrpcAuthGuard;

@@ -1,5 +1,5 @@
-import { UserInterface } from './user.interface';
+import { IUser } from './user.interface';
 
-export interface AuthServiceInterface {
-  verify(params: any): Promise<UserInterface> | undefined | any;
+export interface IAuthService {
+  verify(params: any): Promise<IUser> | undefined | any;
 }
