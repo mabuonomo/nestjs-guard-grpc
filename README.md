@@ -2,7 +2,7 @@
 
 <img src="https://miro.medium.com/max/4500/1*NMkClP0D2ZkWEXAPHYvy1Q.png">
 
-GrpcAuthGuard is a agnostic guard for NestJS optimized for grpc scope. You can inject you personalized auth service to customize it. This guard read from metadatas on a grpc call.
+GrpcAuthGuard is an agnostic guard for NestJS optimized for grpc scope. You can inject you personalized auth service to customize it. This guard read from metadatas on a grpc call.
 
 The library contains also a decorator, called GRPCUser, that inject the user loaded into your service.
 
