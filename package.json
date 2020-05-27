@@ -14,7 +14,18 @@
     "type": "git",
     "url": "git+https://github.com/mabuonomo/nestjs-guard-grpc.git"
   },
-  "author": "",
+  "author": {
+    "name": "mario Buonomo",
+    "email": "ma.buonomo@gmail.com",
+    "url": "https://mariobuonomo.dev"
+  },
+  "keywords": [
+    "grpc",
+    "microservices",
+    "nestjs",
+    "oauth2",
+    "guard"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mabuonomo/nestjs-guard-grpc/issues"
