@@ -1,5 +1,6 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
+const camelcaseKeys = require('camelcase-keys');
 
 export const GRPCUser = createParamDecorator((data: unknown, context: ExecutionContext) => {
-  return context.switchToRpc().getContext().user;
+  return camelcaseKeys(context.switchToRpc().getContext().user);
 });

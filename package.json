@@ -37,6 +37,7 @@
     "@nestjs/testing": "^7.0.13",
     "@types/jest": "^25.2.2",
     "@types/jsonwebtoken": "^8.5.0",
+    "camelcase-keys": "^6.2.2",
     "jsonwebtoken": "^8.5.1",
     "jwks-rsa": "^1.8.0",
     "rxjs": "^6.5.5",
