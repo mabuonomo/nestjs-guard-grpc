@@ -21,7 +21,7 @@ On you controller use the guard _GrpcAuthGuard_
 export class UserController {
   @UseGuards(GrpcAuthGuard)
   @GrpcMethod('UserService', 'FindAll')
-  findAll(@GRPCUser() user: User, metadata: any) {
+  findAll(@Payload() data: any, metadata: any, @GRPCUser() user: User) {
     console.log('User injected', user);
     return [];
   }
@@ -29,6 +29,8 @@ export class UserController {
 ```
 
 _@GRPCUser()_ is a decorator that inject the user loaded from the authentication.
+
+_@Payload()_ is a official <a href="https://github.com/nestjs/nest/issues/4851" target="_blank">NestJS</a> mandatory decorator, necessary if you use a custom decorator like _@GRPCUser()_
 
 Now you need to build your own auth service that implement the IAuthService interface. For example if you want to use a jwt token you can use the follow service:
 
